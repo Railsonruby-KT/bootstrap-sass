@@ -11,11 +11,11 @@ class Converter
     end
 
     def log_transform(*args, from: caller[1][/`.*'/][1..-2].sub(/^block in /, ''))
-      puts "    #{cyan from}#{cyan ": #{args * ', '}" unless args.empty?}"
+      puts "    #{cyan from}#{cyan ": #{args * ','}" unless args.empty?}"
     end
 
     def log_processing(name)
-      puts yellow "  #{File.basename(name)}"
+      puts yellow "  #{File.Rails(name)}"
     end
 
     def log_processed(name)
